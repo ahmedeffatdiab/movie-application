@@ -13,7 +13,7 @@ export default function App() {
     setDataApi(res.data.results)
     setPageCount(res.data.total_pages)
   }
-  let router=createBrowserRouter([
+  let router=createHashRouter([
     {path:'/',element:<CardList dataApi={dataApi} getPage={getPage} pageCount={pageCount}/>},
     {path:'/movie/:id',element:<MovieDetails />}
   ])
